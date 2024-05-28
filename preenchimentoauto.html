@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulário e Contrato</title>
+<style>
+    body {
+        display: flex;
+        flex-direction: row; 
+    }
+    .formulario {
+        flex: 1;
+        padding: 10px;
+    }
+    .contrato {
+        padding: 10px;
+    }
+    .input-group {
+        margin-bottom: 20px;
+    }
+    .input-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .input-group input {
+        width: 250px;
+        padding: 5px;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+    <!-- Crie um contrato que é preenchido automaticamente -->
+<div class="formulario">
+    <div class="input-group">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" onkeyup="preencherContrato()">
+    </div>
+    <div class="input-group">
+        <label for="rg">RG:</label>
+        <input type="text" id="rg" onkeyup="preencherContrato()">
+    </div>
+    <div class="input-group">
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" onkeyup="preencherContrato()">
+    </div>
+    <div class="input-group">
+        <label for="profissao">Profissão:</label>
+        <input type="text" id="profissao" onkeyup="preencherContrato()">
+    </div>
+    <div class="input-group">
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" onkeyup="preencherContrato()">
+    </div>
+</div>
+<div class="contrato">
+    <h2>Contrato</h2>
+    <span id="contrato-texto">Eu, <span id="nomeSpan"></span>, portador do RG <span id="rgSpan"></span> e CPF <span id="cpfSpan"></span>, declaro ser <span id="profissaoSpan"></span> e residir no endereço <span id="enderecoSpan"></span>.</span>
+</div>
+
+<script src="js/preenchimento.js"></script>
+</body>
+</html>

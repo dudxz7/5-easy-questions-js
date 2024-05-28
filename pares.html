@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pares até 100</title>
+    <style>
+        .par{
+            color: rgb(126, 33, 155);
+        }
+    </style>
+</head>
+<body>
+    <p id="aqui"></p>
+    <!-- Imprima os números de 0 a 100 e informe quais são pares -->
+    <script>
+        for (i = 0; i<=100;i++){
+            if (i %2 == 0){
+                document.querySelector("#aqui").innerHTML += "<span class='par'>" + i + " é par" + "<br>"
+            }
+            else{
+                document.querySelector("#aqui").innerHTML += i + "<br>"
+            }
+        }
+    </script>
+</body>
+</html>
